@@ -4,7 +4,7 @@ TIMEOUT = 10000
 MOCHA_OPTS =
 
 install:
-	@npm install --registry=http://r.cnpmjs.org
+	@npm install
 
 test: install
 	@NODE_ENV=test ./node_modules/.bin/mocha \
