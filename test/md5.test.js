@@ -11,9 +11,15 @@ describe('md5.test.js', function() {
 		});
 
 		it('should throw an error when the data is not a string or buffer', function() {
-			(md5(null)).should.throw();
-			(md5({})).should.throw();
-			(md5([])).should.throw();
+			(function() {
+				md5(null);
+			}).should.throw();
+			(function() {
+				md5({});
+			}).should.throw();
+			(function() {
+				md5([]);
+			}).should.throw();
 		});
 	});	
 });
